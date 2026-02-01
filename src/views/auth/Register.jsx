@@ -57,6 +57,7 @@ const Register = () => {
                 value={state.name}
                 onChange={inputHandle}
                 className="px-3 py-2 border rounded-md bg-transparent"
+                required
               />
             </div>
 
@@ -68,6 +69,7 @@ const Register = () => {
                 value={state.email}
                 onChange={inputHandle}
                 className="px-3 py-2 border rounded-md bg-transparent"
+                required
               />
               {errors.email && <p className="text-red-300 text-sm">{errors.email}</p>}
             </div>
@@ -81,6 +83,7 @@ const Register = () => {
                 value={state.password}
                 onChange={inputHandle}
                 className="px-3 py-2 border rounded-md bg-transparent"
+                required
               />
 
               <ul className="text-xs mt-1 space-y-1">
