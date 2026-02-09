@@ -3,7 +3,7 @@ import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import validation from "../../utils/loginValidation"; // separate validation file
 
-const Login = () => {
+const AdminLogin = () => {
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -78,7 +78,7 @@ const Login = () => {
               )}
             </div>
 
-            {/* Forgot password */}
+            {/* Forgot password
             <div className="text-right mb-3">
               <Link
                 to="/forgot-password"
@@ -86,7 +86,7 @@ const Login = () => {
               >
                 Forgot password?
               </Link>
-            </div>
+            </div> */}
 
             <button
               disabled={Object.keys(errors).length > 0}
@@ -94,24 +94,6 @@ const Login = () => {
             >
               Sign In
             </button>
-
-            {/* Social login */}
-            <div className="flex justify-center gap-3 mb-3">
-              <div className="w-[135px] h-[35px] flex bg-orange-700 justify-center items-center rounded-md cursor-pointer">
-                <FaGoogle />
-              </div>
-              <div className="w-[135px] h-[35px] flex bg-blue-700 justify-center items-center rounded-md cursor-pointer">
-                <FaFacebook />
-              </div>
-            </div>
-
-            {/* Register link */}
-            <p className="text-center text-sm">
-              Don’t have an account?{" "}
-              <Link to="/register" className="underline font-medium">
-                Sign Up
-              </Link>
-            </p>
           </form>
         </div>
       </div>
@@ -119,4 +101,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default AdminLogin;
